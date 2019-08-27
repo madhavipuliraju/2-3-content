@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>2-3 Tree</title>
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+      <meta charset="utf-8" />
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131498995-6"></script>
+	  <script>
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+	    gtag('config', 'UA-131498995-6');
+	  </script>
+   </head>
+   <body>
+      <div class="exp" title="2-3 Tree">
+         <div class="longt">
+            <h1 class="hlongt">Introduction to 2-3 Tree</h1>
+         </div>
+         <div class="preamble">
+            <div class="art txt" title="Estimation">
+               <div class="longt">
+                  <h2 class="hlongt">Estimated Time</h2>
+               </div>
+               <div class="art-body">
+                  <p>1 hour</p>
+               </div>
+            </div>
+            <div class="art txt" title="Prerequisites">
+               <div class="longt">
+                  <h2 class="hlongt">Prerequisites of the Experiment</h2>
+               </div>
+               <div class="art-body">
+                  <ul>
+                     <li>
+                        Basic knowledge of
+                        <ul>
+                           <li>
+                              <a href="https://www.geeksforgeeks.org/binary-tree-data-structure/">Binary Tree</a>
+                           </li>
+                           <li>
+                              <a href="https://www.geeksforgeeks.org/binary-search-tree-data-structure/">Binary Search Tree</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>And above all, a curiosity to learn and explore!</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="art txt" title="Overview">
+               <div class="longt">
+                  <h2 class="hlongt">Overview of the Experiment</h2>
+               </div>
+               <div class="art-body">
+                  <p>The experiment features a series of
+                     modules with video lectures, hands-on
+                     practice exercises and quizzes for self
+                     analysis.
+                  </p>
+               </div>
+            </div>
+            <div class="art txt" title="Learning Objectives">
+               <div class="longt">
+                  <h2 class="hlongt">Learning Objectives of the Experiment</h2>
+               </div>
+               <div class="art-body">
+                  <p>In this experiment, we will learn the following:<br>
+                  <ul>
+                     <li>
+                        Structure, representation and implementation of 2-3 Tree data structure.
+                     </li>
+                     <li>
+                        Insertion in a 2-3 tree.
+                     </li>
+                     <li>
+                        Deletion from a 2-3 tree.
+                     </li>
+                     <li>
+                        Find/Search in a 2-3 tree.
+                     </li>
+                  </ul>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="lu" title="Pre-Test">
+            <div class="longt">
+               <h1 class="hlongt">Pre-test of the Experiment</h1>
+            </div>
+            <div class="preamble">
+               <div class="art txt" title="Estimation">
+                  <div class="longt">
+                     <h2 class="hlongt">Estimated Time</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>10 minutes</p>
+                  </div>
+               </div>
+               <div class="art txt" title="Introduction">
+                  <div class="longt">
+                     <h2 class="hlongt">Introduction to Pre-test of the Experiment</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>Pretest includes questions on
+                     <ul>
+                        <li>Binary Trees</li>
+                        <li>Binary Search Trees</li>
+                     </ul>
+                     Read the questions below and select
+                     the correct options from the ones given.
+                     Some questions may have multiple correct
+                     answers.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="Pre-Test Quiz">
+               <div class="longt">
+                  <h2 class="hlongt">Pre-test Quiz</h2>
+               </div>
+               <div class="art txt" title="Pre-Test Quiz">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following statements are correct about a binary tree?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     a) A node in a binary tree can have exactly two children<br>
+                     b) A node in a binary tree can have atmost two children<br>
+                     c) A node in a binary tree can have two or more children<br>
+                     d) A node in a binary tree can have more than one root<br>
+                     <br>Ans. b<br>
+                     Explanation : A node in a binary tree, by definition, can have atmost two children.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">Node values in a binary tree always appear in a sorted order from root to leaf,
+                        going left to right at each level.
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     a) True<br>
+                     b) False<br>
+                     <br>Ans. b<br>
+                     Explanation : There is no specific order in which keys are stored in a binary tree.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following is TRUE about the leaf nodes of a binary tree?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     a) Leaf nodes in a binary tree have no children<br>
+                     b) Atleast one leaf node in a binary tree has two chidren<br>
+                     c) Leaf nodes in a binary tree are allowed to have more than two children<br>
+                     d) Leaf nodes in a binary tree may or may not have child nodes<br>
+                     <br>Ans. a<br>
+                     Explanation: Leaf nodes in a binary tree have no children, and this is the reason why they are called "leaf". Leaf nodes appear at the last level of the tree.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">In a binary search tree all nodes in the left subtree are:
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     a) SMALLER than the root<br>
+                     b) GREATER than the root<br>
+                     b) EQUAL to the root<br>
+                     <br>Ans. a<br>
+                     Explanation :All nodes in the left subtree of the root in a binary search tree are smaller than the root.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">What is the worst case height possible in a binary search tree? Let N be the number of nodes in the tree.
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     a) O(log N)<br>
+                     b) O(N)<br>
+                     c) O(1)<br>
+                     d) None of the above<br>
+                     <br>Ans. b<br>
+                     Explanation: A BST need not be balanced and therefore, the worst case height possible is O(N), where N is the number of nodes in the tree.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="lu" title="2-3 Tree Basics">
+            <div class="longt">
+               <h2 class="hlongt">Basics of 2-3 Tree</h2>
+            </div>
+            <div class="preamble">
+               <div class="art txt" title="Estimation">
+                  <div class="longt">
+                     <h2 class="hlongt">Estimated Time</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>15 minutes</p>
+                  </div>
+               </div>
+               <div class="art txt" title="Introduction">
+                  <div class="longt">
+                     <h2 class="hlongt">Introduction to 2-3 Tree</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>Welcome to this module on tree 2-3 trees!
+                        Take a look at what you will go
+                        through in the module.
+                     <ul>
+                        <li>What is a 2-3 Tree?</li>
+                        <li>Different types of nodes in a 2-3 tree.</li>
+                        <li>Various operations.</li>
+                        <li>A quiz to check your
+                           understanding of
+                           concepts of 2-3 tree
+                        </li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="Basics of 2-3 Tree">
+               <div class="longt">
+                  <h2 class="hlongt">Basics of 2-3 Tree</h2>
+               </div>
+               <div class="art req" title="2-3 Video Introduction">
+                  <div class="longt">
+                     <h2 class="hlongt">Welcome to 2-3 tree Experiment!</h2>
+                  </div>
+                  <div class="description">
+                     <p>Video introduction to 2-3 tree experiment
+                        should be displayed here!
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="Definition">
+                  <div class="longt">
+                     <h2 class="hlongt">Definition</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        2–3 tree is a perfectly balanced binary search tree. <i>It is called a 2-3 tree because each internal node has either 2 or 3 children.</i> In 2-3 tree, every path from root to leaf has the same length and the data structure guarantees worst case O(log n) time complexity for search and insert operations.
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="2-3 Nodes">
+                  <div class="longt">
+                     <h2 class="hlongt">2-3 Nodes</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        There are three types of nodes in a 2-3 tree<br>
+                     <ul>
+                        <li><b>2 Node:</b> An internal node is a 2-node if it has one data element and two children.<br></li>
+                        <li><b>3 Node:</b> An internal node is a 3-node if it has two data elements and three children.<br></li>
+                        <li><b>Leaf Node:</b> A leaf node contains only data elements and has no children.</li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+               <div class="art req" title="2-3 Nodes Representation">
+                  <div class="longt">
+                     <h2 class="hlongt">Pictorial Representation of 2-3 tree nodes </h2>
+                  </div>
+                  <div class="description">
+                     Pictorial Representation of 2-3 tree
+                  </div>
+               </div>
+               <div class="art txt" title="Properties">
+                  <div class="longt">
+                     <h2 class="hlongt">Properties of 2-3 tree</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        2-3 tree has the following properties:<br>
+                     <ul>
+                        <li>Every internal node is a 2-node or a 3-node.</li>
+                        <li>All leaves are at the same level.</li>
+                        <li>
+                           All data is kept in <b>sorted order</b>. This means that:
+                           <ul>
+                              <li>In case of a <b>2 Node,</b> data items in left subtree are smaller than root and data items in right subtree are greater than root.</li>
+                              <li>In case of a <b>3 Node,</b> data items in left subtree are smaller than root, data items in middle subtree are greater than root and data items in the right subtree are greater than the root and middle subtree.</li>
+                           </ul>
+                        </li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="2-3 tree vs BST">
+                  <div class="longt">
+                     <h2 class="hlongt">2-3 tree vs BST</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                     <ul>
+                        <li>The main advantage with 2-3 trees is that it is balanced in nature as opposed to a binary search tree whose height in the worst case can be O(N). </li>
+                        <li>Due to this, the worst case time-complexity of operations such as search, insertion and deletion is O(Log(N)) as the height of a 2-3 tree is O(Log(N)).</li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="2-3 tree Quiz">
+               <div class="longt">
+                  <h2 class="hlongt">Check your understanding of Basics of 2-3 tree</h2>
+               </div>
+               <div class="art txt" title="Questions">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following is true?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     <br/>
+                     a) Data in a 2-3 tree is stored in unsorted manner<br>
+                     b) Data in a 2-3 tree is stored in a sorted manner<br>
+                     c) There is no ordering among data items in a 2-3 tree<br>
+                     d) Only leaf nodes have sorted data items<br>
+                     <br>Ans. b<br>
+                     Explanation : Data items in a 2-3 tree are stored in a sorted manner. The left subtree has data items smaller than the root, the middle subtree has data item greater than root and smaller than right subtree and the right subtree has data items greater than left and middle subtree.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following is true?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     <br/>
+                     a) Leaf nodes in a 2-3 tree can be at any level<br>
+                     b) Leaf nodes in a 2-3 tree can be only at odd levels<br>
+                     c) All leaf nodes in a 2-3 have the same level<br>
+                     d) None of the above<br>
+                     <br>Ans. c<br>
+                     Explanation : An important property of 2-3 is that all leaf nodes have the same level.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following best describes a 2-node?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     <br/>
+                     a) A 2-node has one data item and two children<br>
+                     b) A 2-node has two data items and two children<br>
+                     c) A 2-node has one data item and one child<br>
+                     d) None of the above<br>
+                     <br>Ans. a<br>
+                     Explanation : By definition, a 2-node has one data item and two children.
+                  </div>
+               </div>
+               <div class="art txt" title="">
+                  <div class="longt">
+                     <h2 class="hlongt">Which of the following best describes a 3-node?
+                     </h2>
+                  </div>
+                  <div class="art-body">
+                     <br/>
+                     a) A 3-node has one data item and two children<br>
+                     b) A 3-node has two data items and three children<br>
+                     c) A 3-node has one data item and one child<br>
+                     d) None of the above<br>
+                     <br>Ans. b<br>
+                     Explanation : By definition, A 3-node has two data items and three children.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="lu" title="Operations">
+            <div class="longt">
+               <h1 class="hlongt">Operations</h1>
+            </div>
+            <div class="preamble">
+               <div class="art txt" title="Estimation">
+                  <div class="longt">
+                     <h2 class="hlongt">Estimated Time</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>30 minutes</p>
+                  </div>
+               </div>
+               <div class="art txt" title="Operations on 2-3 trees">
+                  <div class="longt">
+                     <h2 class="hlongt">Operations on 2-3 trees</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>Welcome to this module on Operations on 2-3 tree! Take a look at what you
+                        will go through in this module.
+                     <ul>
+                        <li>Insertion in a 2-3 tree</li>
+                        <li>Search in a 2-3 tree</li>
+                        <li>Deletion in a 2-3 tree</li>
+                        <li>A quiz to check your
+                           understanding of
+                           2-3 tree.
+                        </li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="Search">
+               <div class="longt">
+                  <h2 class="hlongt">Search</h2>
+               </div>
+               <div class="art req" title="2-3 Search Video">
+                  <div class="longt">
+                     <h2 class="hlongt">2-3 Search Video</h2>
+                  </div>
+                  <div class="description">
+                     <p>2-3 Search Video
+                        should be displayed here!
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="Intuition">
+                  <div class="longt">
+                     <h2 class="hlongt">Intuition</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        Searching for an item in a 2–3 tree is similar to searching for an item in a binary search tree. Since the data elements in each node are ordered, a search function will be directed to the correct subtree and eventually to the correct node which contains the item.
+                     </p>
+                  </div>
+               </div>
+               <div class="art req" title="Search: 2-Node">
+                  <div class="longt">
+                     <h2 class="hlongt">Search in a 2-Node</h2>
+                  </div>
+                  <div class="description">
+                     Search in a 2-Node
+                  </div>
+               </div>
+               <div class="art req" title="Search: 3-Node">
+                  <div class="longt">
+                     <h2 class="hlongt">Search in a 3-Node</h2>
+                  </div>
+                  <div class="description">
+                     Search in a 3-Node
+                  </div>
+               </div>
+               <div class="art txt" title="Algorithm">
+                  <div class="longt">
+                     <h2 class="hlongt">Algorithm</h2>
+                  </div>
+                  <div class="art-body">
+                     <ul>
+                        <li>1. Let <b>T</b> be a 2–3 tree and <b>d</b> be the data element we want to find. If <b>T</b> is <b>empty,</b> then d is not in T and we're <b>done.</b></li>
+                        <br>
+                        <li>2. Let <b>r</b> be the root of T.</li>
+                        <br>
+                        <li>
+                           3. Suppose <b>r is a leaf</b>. <br>
+                           <ul>
+                              <li><b>If d is not in r</b>, then d is not in T and we're <b>done.</b></li>
+                              <li><b>Otherwise, d is in T.</b> In particular, d can be found at a leaf node. We need no further steps and we're done.</li>
+                           </ul>
+                        </li>
+                        <br>
+                        <li>
+                           4. Suppose <b>r is a 2-node</b> with left child L and right child R. Let e be the data element in r. There are three cases:<br>
+                           <ul>
+                              <li>If <b>d = e</b>, then we've found d in T and we're <b>done.</b></li>
+                              <li>If <b>d &lt e,</b> then set T to L, which by definition is a 2–3 tree, and <b>go back to step 2.</b></li>
+                              <li>If <b>d > e,</b> then set T to R and <b>go back to step 2.</b></li>
+                           </ul>
+                        </li>
+                        <br>
+                        <li>
+                           5. Suppose <b>r is a 3-node</b> with left child L, middle child M, and right child R. Let a and b be the two data elements of r, where a &lt b. There are four cases:<br>
+                           <ul>
+                              <li>If <b>d is equal to a or b</b>, then d is in T and we're done.</li>
+                              <li>If <b>d &lt a,</b> then set T to L and <b>go back to step 2.</b></li>
+                              <li>If <b>a &lt d &lt b,</b> then set T to M and <b>go back to step 2.</b></li>
+                              <li>If <b>d > b,</b> then set T to R and <b>go back to step 2.</b></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="Insertion">
+               <div class="longt">
+                  <h2 class="hlongt">Insertion</h2>
+               </div>
+               <div class="art req" title="2-3 Insertion Video">
+                  <div class="longt">
+                     <h2 class="hlongt">2-3 Insertion Video</h2>
+                  </div>
+                  <div class="description">
+                     <p>2-3 Insertion Video
+                        should be displayed here!
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="Intuition">
+                  <div class="longt">
+                     <h2 class="hlongt">Intuition</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        Insertion in a 2-3 tree is very different from a Binary Search Tree as in a 2-3 tree, a node can have one data item (2-Node) or two data items (3-Node). At first, we search for the correct position of the new data element to be inserted into the tree. Once, we have found the postion of the new data element, one of the two conditions arise:<br>
+                     <ul>
+                        <li>The data element is to be inserted as a new node. In this case, we simply create a new node and insert the data element.</li>
+                        <li>In another case, the new data element is to be inserted in an already full node. Here, full node means a node which cannot accomodate any new element. This results in <b>splitting</b> of the node</li>
+                     </ul>
+                     </p>-
+                  </div>
+               </div>
+               <div class="art req" title="Insert Example 1">
+                  <div class="longt">
+                     <h2 class="hlongt">Insert in a node with only one data element</h2>
+                  </div>
+                  <div class="description">
+                     Insert in a node with only one data element
+                  </div>
+               </div>
+               <div class="art req" title="Insert Example 2">
+                  <div class="longt">
+                     <h2 class="hlongt">Insert in a node with two data elements whose parent contains only one data element.</h2>
+                  </div>
+                  <div class="description">
+                     Insert in a node with two data elements whose parent contains only one data element.
+                  </div>
+               </div>
+               <div class="art req" title="Insert Example 3">
+                  <div class="longt">
+                     <h2 class="hlongt">Insert in a node with two data elements whose parent also contains two data elements.</h2>
+                  </div>
+                  <div class="description">
+                     Insert in a node with two data elements whose parent also contains two data elements.
+                  </div>
+               </div>
+               <div class="art txt" title="Algorithm">
+                  <div class="longt">
+                     <h2 class="hlongt">Algorithm</h2>
+                  </div>
+                  <div class="art-body">
+                     <ul>
+                        <li>1. If the tree is empty, create a new node and insert the data item. <b>Done.</b></li>
+                        <li>2. If the tree has only one node with one data element, insert the new element in this node.<b>Done.</b></li>
+                        <li>3.
+                           <b>Otherwise, search for the correct position of the new element.</b> <br>
+                        </li>
+                        <li>
+                           4. If the new element is to be inserted in a node with only one data element. Perform insert and we're <b>done.</b>
+                        </li>
+                        <li>
+                           5. If the new element is to be inserted in a node with two data elements and whose parent contains only one data element.<br>
+                           <ul>
+                              <li>
+                                 Insert the node in its correct position; this creates a <b>temporary node</b> with three data items.
+                              </li>
+                              <li>
+                                 Split the temporary node, by moving the medium element to the root. This results in creation of a 3-Node and we're <b>done.</b>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           6. If the new element is to be inserted in a node with two data elements and whose parent also contains two data elements.
+                           <ul>
+                              <li>
+                                 Insert the node in its correct position, this creates a <b>temporary node</b> with three data items.
+                              </li>
+                              <li>
+                                 Move the median element to the parent node and split the current node into two nodes. Now, the <b>parent becomes a temporary node with three elements.</b>
+                              </li>
+                              <li>
+                                 Split the parent node by moving the median element one level up, this creates a new root of the current subtree and we're <b>done.</b>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="Deletion">
+               <div class="longt">
+                  <h2 class="hlongt">Deletion</h2>
+               </div>
+               <div class="art req" title="2-3 Deletion Video">
+                  <div class="longt">
+                     <h2 class="hlongt">2-3 Deletion Video</h2>
+                  </div>
+                  <div class="description">
+                     <p>2-3 Deletion Video
+                        should be displayed here!
+                     </p>
+                  </div>
+               </div>
+               <div class="art txt" title="Intuition">
+                  <div class="longt">
+                     <h2 class="hlongt">Intuition</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>
+                        Deletion in a 2-3 is again different from that of a Binary Search tree. Recall that, in a 2-3 tree there are two types of nodes viz., 2-Node and 3-Node. When we delete a data element from the node of a 2-3 tree, it might lead to the property of the tree being violated.<br>
+                        In order to maintain the property of a 2-3 tree even after deletion of a data element, we perform various operations such as <b>merge</b>, <b>split</b> and <b>redistribution</b> of elements in the tree.
+                     </p>
+                  </div>
+               </div>
+               <div class="art req" title="Delete Example 1">
+                  <div class="longt">
+                     <h2 class="hlongt">Delete a data element from an internal node.</h2>
+                  </div>
+                  <div class="description">
+                     Delete a data element from an internal node.
+                  </div>
+               </div>
+               <div class="art req" title="Delete Example 2">
+                  <div class="longt">
+                     <h2 class="hlongt">Delete a data element from leaf node.</h2>
+                  </div>
+                  <div class="description">
+                     Delete a data element from leaf node.
+                  </div>
+               </div>
+               <div class="art txt" title="Algorithm">
+                  <div class="longt">
+                     <h2 class="hlongt">Algorithm</h2>
+                  </div>
+                  <div class="art-body">
+                     <ul>
+                        <li>
+                           1. If the data element to be deleted in the only element in the tree. Delete the node and we're <b>done.</b>
+                        </li>
+                        <li>
+                           2. If the data element to be deleted is a present in the leaf. Then, delete the data element. However, this deletion will result in violation of the 2-3 tree property. To correct this, we perform redistribution and merging of elements in the node such that the property is preserved.
+                        </li>
+                        <li>
+                           3. If the data element to be deleted is present in an internal node. Then, replace this data element with the inorder successor of the element. Now, delete the element according to step 2.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="2-3 tree Demo">
+               <div class="longt">
+                  <h2 class="hlongt">Demo for operations on 2-3 tree</h2>
+               </div>
+               <div class="art req" title="2-3 tree Demo">
+                  <div class="longt">
+                     <h2 class="hlongt">Demo for operations on 2-3 tree</h2>
+                  </div>
+                  <div class="description">
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="2-3 tree Practice">
+               <div class="longt">
+                  <h2 class="hlongt">Practice for operations on 2-3 tree</h2>
+               </div>
+               <div class="art req" title="2-3 tree Practice">
+                  <div class="longt">
+                     <h2 class="hlongt">Practice for operations on 2-3 tree</h2>
+                  </div>
+                  <div class="description">
+                  </div>
+               </div>
+            </div>
+            <div class="task" title="2-3 tree Exercise">
+               <div class="longt">
+                  <h2 class="hlongt">Exercise for operations on 2-3 tree</h2>
+               </div>
+               <div class="art req" title="2-3 tree Exercise">
+                  <div class="longt">
+                     <h2 class="hlongt">Exercise for operations on 2-3 tree</h2>
+                  </div>
+                  <div class="description">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="lu" title="Post-Test Quiz">
+            <div class="longt">
+               <h1 class="hlongt">Post-Test Quiz</h1>
+            </div>
+            <div class="preamble">
+               <div class="art txt" title="Estimation">
+                  <div class="longt">
+                     <h2 class="hlongt">Estimated Time</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>10 minutes</p>
+                  </div>
+               </div>
+               <div class="art txt" title="Introduction">
+                  <div class="longt">
+                     <h2 class="hlongt">Introduction to Post-test of the Experiment</h2>
+                  </div>
+                  <div class="art-body">
+                     <p>Post-test includes questions on
+                     <ul>
+                        <li>Insertion in 2-3 tree</li>
+                        <li>Deletion in 2-3 tree</li>
+                        <li>Search in a 2-3 tree</li>
+                     </ul>
+                     Read the questions below and select
+                     the correct options from the ones given.
+                     Some questions may have multiple correct
+                     answers.
+                     </p>
+                  </div>
+               </div>
+            </div>
+                 <div class="task" title="Post Test Quiz">
+                  <div class="longt">
+                     <h2 class="hlongt">Post-test Quiz</h2>
+                  </div>
+                  <div class="art txt" title="Post-Test Quiz">
+                     <div class="longt">
+                        <h2 class="hlongt">Which of the following statements are correct about a 2-3 tree?
+                        </h2>
+                     </div>
+                     <div class="art-body">
+                        a) A 2-3 tree has either 2 keys or 3 keys in every node<br>
+                        b) A 2-3 has two types of nodes, namely 2-node and 3-node<br>
+                        c) A node in a 2-3 tree can have only only one child<br>
+                        d) A node in a 2-3 tree can have more than one root<br>
+                        <br>Ans. b<br>
+                        Explanation : By definition, a 2-3 tree can have 2-node and 3-node.
+                     </div>
+                  </div>
+                  <div class="art txt" title="">
+                     <div class="longt">
+                        <h2 class="hlongt">Key values in the nodes of a 2-3 tree always appear sorted from top to bottom and left to right in the tree.
+                        </h2>
+                     </div>
+                     <div class="art-body">
+                        a) True<br>
+                        b) False<br>
+                        <br>Ans. a<br>
+                        Explanation : Keys in a 2-3 tree are always sorted.
+                     </div>
+                  </div>
+                  <div class="art txt" title="">
+                     <div class="longt">
+                        <h2 class="hlongt">Which of the following is TRUE about the leaf nodes of a 2-3 tree?
+                        </h2>
+                     </div>
+                     <div class="art-body">
+                        a) All leaves in a 2-3 tree are at the same level<br>
+                        b) Atleast one leaf node in a 2-3 tree has two chidren<br>
+                        c) Leaf nodes in a 2-3 tree are allowed to have more than two children<br>
+                        d) Leaf nodes in a 2-3 tree may or may not have child nodes<br>
+                        <br>Ans. a<br>
+                        Explanation: Leaf nodes in a 2-3 tree are at the same level
+                     </div>
+                  </div>
+                  <div class="art txt" title="">
+                     <div class="longt">
+                        <h2 class="hlongt">Which of the following is correct about a 2-node:
+                        </h2>
+                     </div>
+                     <div class="art-body">
+                        a) A two node has only one child<br>
+                        b) A two node has one data element and two children.<br>
+                        c) A two node has two data element and one child.<br>
+                        <br>Ans. b<br>
+                        Explanation : A two node has one data element and two children.
+                     </div>
+                  </div>
+                  <div class="art txt" title="">
+                     <div class="longt">
+                        <h2 class="hlongt">What is the time complexity of search in a 2-3 tree?
+                        </h2>
+                     </div>
+                     <div class="art-body">
+                        a) O(log N)<br>
+                        b) O(N)<br>
+                        c) O(1)<br>
+                        d) None of the above.<br>
+                        <br>Ans. a<br>
+                        Explanation: A 2-3 is a balanced tree so the time complexity of search is O(log N)
+                     </div>
+                  </div>
+            </div>
+            <div class="lu" title="References">
+            <div class="longt">
+                <h2 class="hlongt">Further Readings/References</h2>
+            </div>
+
+            <div class="preamble">
+                <div class="art txt" title="Explore">
+                    <div class="longt">
+                        <h2 class="hlongt">Explore 2-3 Tree</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>You can explore more about tree traversal through following resources:</p>
+                        <p>
+                            <h4>Theory</h4>
+                            <ul>
+                                <li><a href="https://en.wikipedia.org/wiki/2%E2%80%933_tree">Concept</a></li>
+                                <li><a href="https://www.geeksforgeeks.org/2-3-trees-search-and-insert/">Search and Insert</a></li>
+                            </ul>
+                        </p>
+                        <p>
+                            <h4>Practice</h4>
+                            <ul>
+                                <li><a href="https://www.sanfoundry.com/2-3-tree-multiple-choice-questions-answers-mcqs/">OpenDSA</a></li>
+                            </ul>
+                        </p>
+                        <p>
+                            <h4>Quizzes</h4>
+                            <ul>
+                                <li><a href="https://www.goconqr.com/quiz/7128225/3-2-3-tree/">Questions and Answers</a></li>
+        
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </div>
+      </div>
+      <script type="text/javascript" src="/js/loader.js"></script>
+   </body>
+</html>
